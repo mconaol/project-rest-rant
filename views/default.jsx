@@ -1,4 +1,6 @@
-const react = require('react')
+import React from 'react';
+
+const react = require ('react')
 
 function Def (html) {
     return (
