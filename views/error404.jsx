@@ -8,7 +8,7 @@ function error404 () {
               <h1>404: PAGE NOT FOUND</h1>
               <p>Oops, sorry, we can't find this page!</p>
               <p>
-              <img src="/images/sleeping_dog.jpg" alt="Gray sleeping dog"/>
+              <img src="/images/sleeping_dog.jpg" alt="Gray sleeping dog" width="500" height="500"/>
               </p>
               <p>
               Photo by <a href="https://unsplash.com/@agmakonts?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Adam Grabek</a> on <a href="https://unsplash.com/photos/white-and-gray-dog-JCXANpeR2XI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
