@@ -6,20 +6,28 @@ function new_form(){
         <Def>
             <main>
                 <h1>Add a new Place</h1>
-                <form method="POST" action="/places" style={{ display: 'flex', flexDirection: 'column' }}>
-                    <div>
+                <form method="POST" action="/places" >
+                    <div className="form-group">
                         <label htmlFor="name">Place Name</label>
-                        <input id="name" name="name" style={{ marginBottom: '10px' }}/>
-                        <label htmlFor="pic">Place Picture</label>
-                        <input type="url" id="pic" name="pic" style={{ marginBottom: '10px' }}/>
-                        <label htmlFor="city">Place City</label>
-                        <input id="city" name="city" style={{ marginBottom: '10px' }}/>
-                        <label htmlFor="state">Place State</label>
-                        <input id="state" name="state" style={{ marginBottom: '10px' }}/>
-                        <label htmlFor="cuisines">Place Cuisines</label>
-                        <input id="cuisines" name="cuisines" required style={{ marginBottom: '10px' }}/>
+                        <input className="form-control" id="name" name="name" />
                     </div>
-                    <input type="submit" value="Add Place"/>
+                    <div className="form-group">
+                        <label htmlFor="pic">Place Picture</label>
+                        <input className="form-control" type="url" id="pic" name="pic" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="city">Place City</label>
+                        <input className="form-control" id="city" name="city" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="state">Place State</label>
+                        <input className="form-control" id="state" name="state" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="cuisines">Place Cuisines</label>
+                        <input className="form-control" id="cuisines" name="cuisines" required />
+                    </div>
+                    <input className="btn btn-primary" type="submit" value="Add Place"/>
                 </form>
             </main>
         </Def>
