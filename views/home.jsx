@@ -5,7 +5,7 @@ function home () {
     return (
       <Def>
           <main>
-              <h1>HOME</h1>
+              <h1>REST-Rant</h1>
               <div>
                 <img src="/images/tuna_poke_bowl.jpg" alt="Tuna poke bowl" />
                 <div>
@@ -13,7 +13,7 @@ function home () {
                 </div>
               </div>
               <a href="/places">
-  <button className="btn-primary">Places Page</button>
+  <button style={{ backgroundColor: '#007bff', color: '#ffffff', padding: '10px 20px', borderRadius: '5px', border: 'none', fontSize: '16px' }}>Places Page</button>
 </a>
 
           </main>
@@ -21,6 +21,8 @@ function home () {
     )
   }
 
+
+ 
 
 
 module.exports = home
