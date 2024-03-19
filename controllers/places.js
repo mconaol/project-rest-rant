@@ -8,7 +8,7 @@ router.get('/new', (req,res)=>{
 router.post('/', (req, res)=>{
 
   if (!req.body.pic){
-    req.body.pic='http://placekitten.com/400/400'
+    req.body.pic='images/silverware_set.jpg'
   }
   if(!req.body.city){
     req.body.city = 'Anytown'
@@ -52,10 +52,24 @@ router.delete('/:id',(req, res)=>{
     res.render('error404')
   }
   else {
-    places.splica(id, 1)
+    places.splice(id, 1)
     res.redirect('/places')
   }
 
+})
+
+router.get('/:id/edit', (req,res)=>{
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+    res.render('error404')
+  }
+  else if (!places[id]){
+    res.render('error404')
+  }
+  else {
+    res.render('places/edit',{ place: places[id]})
+  }
+ 
 })
   
 module.exports = router;
