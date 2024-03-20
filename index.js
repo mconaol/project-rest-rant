@@ -11,7 +11,7 @@ app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json()); 
-app.use(methodOverride('method'))
+app.use(methodOverride('_method'))
 
 
 //Controllers & Routes
