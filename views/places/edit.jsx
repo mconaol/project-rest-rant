@@ -8,7 +8,7 @@ function edit_form (data) {
                 <h1>Edit Place</h1>
                 <form method="POST" action={`/places/${data.id}?_method=PUT`} >
                 <div className="row">
-                    <div className="form-group col-sm-6">
+                    <div className="form-group col-sm-6">np
                         <label htmlFor="name">Place Name</label>
                         <input className="form-control" id="name" name="name" defaultValue={data.place.name}/>
                     </div>
