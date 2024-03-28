@@ -2,7 +2,7 @@ require ('dotenv').config()
 const mongoose = require('mongoose')
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/your_database_name')
+mongoose.connect('mongodb://localhost:27017/rest-rant')
 .then(() => {
   console.log('Connected to MongoDB');
 })
