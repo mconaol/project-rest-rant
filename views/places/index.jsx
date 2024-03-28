@@ -17,9 +17,10 @@ function index (data) {
             {place.cuisines}
           </p>
           <img src={place.pic} alt={place.name} width="500" height="450"/>
-          <p className="text-center">
+            <h3>
           Located in {place.city}, {place.state}
-          </p>
+          </h3>
+
         </div>
       )
     })
