@@ -4,35 +4,35 @@ const db = require('../models')
 //INDEX
 router.get('/', (req, res) => {
   db.Place.find()
-  .then((places)=>{
-    res.render('places/index',{places})
-  })
-  .catch(err=>{
-    console.log(err)
-    res.render('error404')
-  })
+    .then((places) => {
+      res.render('places/index', { places })
+    })
+    .catch(err => {
+      console.log(err)
+      res.render('error404')
+    })
 })
 
 //POST 
 router.post('/', (req, res) => {
   db.Place.create(req.body)
-  .then(()=>{
-    res.redirect('/places')
-  })
-  .catch(err=>{
-    if (err && err.name == 'ValidationError'){
-      let message = 'Validation Error:'
-      for (var field in err.errors){
-        message += `${field} was ${err.errors[field].value}.`
-        message += `${err.errors[field].message}`
+    .then(() => {
+      res.redirect('/places')
+    })
+    .catch(err => {
+      if (err && err.name == 'ValidationError') {
+        let message = 'Validation Error:'
+        for (var field in err.errors) {
+          message += `${field} was ${err.errors[field].value}.`
+          message += `${err.errors[field].message}`
+        }
+        console.log('Validation error message', message)
+        res.render('places/new', { message })
       }
-      console.log('Validation error message', message)
-      res.render('places/new',{ message })
-    }
-    else{
-    res.render('error404')
-    }
-  })
+      else {
+        res.render('error404')
+      }
+    })
 })
 
 
@@ -43,13 +43,13 @@ router.get('/new', (req, res) => {
 //SHOW
 router.get('/:id', (req, res) => {
   db.Place.findById(req.params.id)
-  .then(place => {
+    .then(place => {
       res.render('places/show', { place })
-  })
-  .catch(err => {
+    })
+    .catch(err => {
       console.log('err', err)
       res.render('error404')
-  })
+    })
 })
 
 router.get('/:id', (req, res) => {
@@ -73,7 +73,7 @@ router.post('/:id/rant', (req, res) => {
 })
 
 router.delete('/:id/rant/:rantId', (req, res) => {
-    res.send('GET /places/:id/rant/:rantId stub')
+  res.send('GET /places/:id/rant/:rantId stub')
 })
 
 module.exports = router
