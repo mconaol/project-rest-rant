@@ -7,7 +7,7 @@ function NewComment({ data }) {
         <Def>
             <main>
                 <h1>New Comment</h1>
-                <form method="POST" action={`/places/${data.id}/comment?_method=POST`}>
+                <form method="POST" action={`/places/${data.id}`}>
                     
                         <div className="form-group">
                         <label htmlFor="author">Author</label>
