@@ -23,7 +23,7 @@ function show(data) {
     </h3>
     )
   if (data.place.comments.length) {
-    comments = data.place.comments.map(c => {
+    comments = data.place.comments.map(c=> {
       return (
         <div className="border">
           <h2 className="rant">{c.rant ? 'Rant! 😡' : 'Rave! 😻'}</h2>
@@ -59,10 +59,10 @@ function show(data) {
           <div className="col-sm-6">
           <h1>{data.place.name}</h1>
           <h2>Rating</h2>
-          <p>Not Rated</p>
+          {rating}
           <h2>Comments</h2>
              {comments}
-             <form method="POST" action={`/places/${req.params.id}`}>
+             <form method="POST" action={`/places/${data.place._id}/rant`}>
                 <button type="submit" className="btn btn-danger">New Comment</button>
              </form>
           </div>
